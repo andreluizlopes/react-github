@@ -22,24 +22,21 @@ class SearchUser extends React.Component{
   render() {
     return (
       <div className="jumbotron">
-        <h1>GitHub Info</h1>
-        <div className="row">
-          <form onSubmit={this.handleSubmit}>
-            <div className="form-group">
-              <label>Username</label>
-              <input
-                type="text"
-                ref="username"
-                className="form-control"
-                placeholder="Ex: andreluizlopes"
+
+        <form action="#" onSubmit={this.handleSubmit}>
+            <div className="mdl-textfield fmdl-textfield mdl-js-textfield">
+                <input
+                    type="text"
+                    ref="username"
+                    className="mdl-textfield__input"
+                    placeholder="Ex: andreluizlopes"
                 />
             </div>
             <button
-              type="submit"
-              className="btn btn-primary">Buscar
+                type="submit"
+                className="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">Buscar
             </button>
-          </form>
-        </div>
+        </form>
       </div>
     );
   }

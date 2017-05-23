@@ -24,11 +24,18 @@ class GitHub extends React.Component{
     render() {
         return (
             <div>
-                <h1>Github user</h1>
-                <SearchUser 
-                    updateUser={this.updateUser}
-                    updateRepos={this.updateRepos}
-                />
+                <div className="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+                    <header className="mdl-layout__header">
+                        <div className="mdl-layout__header-row">
+                            <span className="mdl-layout-title"><h3>GitHub Info</h3></span>
+                            <div className="mdl-layout-spacer"></div>
+                            <SearchUser 
+                                updateUser={this.updateUser}
+                                updateRepos={this.updateRepos}
+                            />
+                        </div>
+                    </header>
+                </div>
                 <UserProfile 
                     user={this.state.user}
                     repos={this.state.repos}
